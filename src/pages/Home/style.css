@@ -23,3 +23,9 @@
 .post-title {
 	display: inline;
 }
+.author {
+	color: darkslategray
+}
+.post {
+	margin-bottom: 1rem;
+}

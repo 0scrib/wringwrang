@@ -27,9 +27,13 @@ export function PostsRenderer() {
      return (
         <div>
             {posts.map(post => (
-                <article key={post.slug}>
+                <article class="post" key={post.slug}>
                     <h2 class="post-title">{post.meta.title}</h2> <span class="post-date"> * ({FormatDate(post.meta.date)})</span>
                     <Markdown>{post.content}</Markdown>
+                    <br/>
+                    {post.meta.author && 
+                        <span class="author">-- {post.meta.author}</span>
+                    }
                 </article>
             ))}
         </div>
